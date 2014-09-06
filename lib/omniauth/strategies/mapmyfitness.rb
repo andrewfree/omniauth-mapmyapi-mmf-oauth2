@@ -15,7 +15,7 @@ module OmniAuth
 
       uid { raw_info["id"].to_s }
 
-      info { "name" =>raw_info["display_name"], "nickname" => raw_info["username"] }
+      info { { "name" =>raw_info["display_name"], "nickname" => raw_info["username"] } }
 
       extra { raw_info }
 
