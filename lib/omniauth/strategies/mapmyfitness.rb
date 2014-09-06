@@ -15,7 +15,7 @@ module OmniAuth
 
       uid { raw_info["id"].to_s }
 
-      info { raw_info.delete("email","first_name","last_name","gender","birthday","weight","height","location").update("name" =>raw_info["display_name"],"nickname" => raw_info["username"]) }
+      info { "name" =>raw_info["display_name"], "nickname" => raw_info["username"] }
 
       extra { raw_info }
 
